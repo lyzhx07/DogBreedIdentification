@@ -2,13 +2,12 @@
 
 ## Pathways
 To accomplish the classification of dog breeds, we came up with three different pathways.
-1. crop body & classification
-2. facial key point detection & calculate and crop facial region & classification 
-3. crop face & classification ~~FIRST, WE WILL TRY THIS ONE~~
+1. Crop body & classification
+2. Facial key point detection & calculate and crop facial region & classification 
+3. Crop face & classification **~~FIRST, WE WILL TRY THIS ONE~~**
 4. Use pre-trained model to mark the region of the dog, crop down the region, put it on a black canvas, then do the claasification **NOW LETS TRY THIS ONE**
 
 ##									WORKING PROCEDURE								
-
 |FROM						|USE 						|GET 						|
 |---------------------------|---------------------------|---------------------------|
 |~~Original pics~~			|~~Manually label~~			|~~600 labeled data~~		|
@@ -33,5 +32,7 @@ To accomplish the classification of dog breeds, we came up with three different 
 
 ## Something about pre-trained model
 Mask_RCNN not accurate enough.
-p3 cannot distinguish two dogs next to each other.
+
+P3 cannot distinguish two dogs next to each other.
+
 Temporary best solution: get masks and boxes from Mask_RCNN, put mask region of the picture into the box with pure black background.
