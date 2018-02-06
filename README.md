@@ -7,8 +7,8 @@ To accomplish the classification of dog breeds, we came up with three different 
 3. crop face & classification ~~FIRST, WE WILL TRY THIS ONE~~
 4. Use pre-trained model to mark the region of the dog, crop down the region, put it on a black canvas, then do the claasification **NOW LETS TRY THIS ONE**
 
-|									WORKING PROCEDURE								|
-|-----------------------------------------------------------------------------------|
+|							|		WORKING PROCEDURE	|							|
+|---------------------------|---------------------------|---------------------------|
 |FROM						|USE 						|GET 						|
 |---------------------------|---------------------------|---------------------------|
 |~~Original pics~~			|~~Manually label~~			|~~600 labeled data~~		|
@@ -29,7 +29,7 @@ To accomplish the classification of dog breeds, we came up with three different 
 |---------------------------|---------------------------|---------------------------|
 |10k resized pics 			|Train network2				|Trained main_model			|
 |---------------------------|---------------------------|---------------------------|
-|		Combine two networks, resize functions and crop function, train again.		|
+|		Combine two networks, resize functions and crop function, train again.||	|
 |---------------------------|---------------------------|---------------------------|
 |10k test pics 				|Combined Trained network 	|Test result 				|
 
