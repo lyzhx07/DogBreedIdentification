@@ -7,7 +7,7 @@ To accomplish the classification of dog breeds, we came up with three different 
 3. Crop face & classification **~~FIRST, WE WILL TRY THIS ONE~~**
 4. Use pre-trained model to mark the region of the dog, crop down the region, put it on a black canvas, then do the claasification **NOW LETS TRY THIS ONE**
 
-##									WORKING PROCEDURE								
+## WORKING PROCEDURE								
 |FROM						|USE 						|GET 						|
 |---------------------------|---------------------------|---------------------------|
 |~~Original pics~~			|~~Manually label~~			|~~600 labeled data~~		|
@@ -22,8 +22,12 @@ To accomplish the classification of dog breeds, we came up with three different 
 |**COMBINE** 				|**EVERYTHING**				|**TOGETHER**				|
 |10k test pics 				|Combined Trained network 	|Test result 				|
 
+## Current Works
+1. Create a image name list.(copy function from label.py) and generate bbox and mask from Mask-RCNN.
+2. Post-process Mask_RCNN output.
+3. Original pictures cropping function.
 
-## Options:
+## Options
 1. Change classifier.
 2. Use multiple clsasifiers and combine the results.
 3. Use different models and combine the results.
