@@ -1,9 +1,9 @@
-def crop(r):
+def crop(r, image):
 	'''
 	- crop the image based on box
 	- only show the colour if the mask value is 1
 	- pad pixel with mask value 0 with black colour [0, 0, 0]
-	- input: detection results of an image
+	- input: detection results of an image and the image
 		in demo.ipynb:
 		results = model.detect([image], verbose=1)
 		r = results[0]
