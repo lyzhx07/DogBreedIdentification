@@ -27,7 +27,7 @@ def crop(r, image):
 	for i in range(num):
 		if class_ids[i] == id:  
 			break
-		else: 
+		if i == num-1:
 			return None	# no dog detected from the image, return None
 	
 	# Box
