@@ -30,6 +30,8 @@ class data_reader():
 #				print(img_path)
 				breed_id = int(line_data[2].strip('\n'))
 				img = cv2.imread(img_path)
+				if img is None:
+					continue
 				img = cv2.resize(img, (256, 256))		# resize to (256, 256) - tbc
 				data_row = [img, breed_id]
 				data.append(data_row)
@@ -57,6 +59,25 @@ def testing_reader():
 		cv2.imshow('image', img)
 		cv2.waitKey(0)
 
-#testing_reader()
+def testing_reader2():
+	fname = 'label_with_id.csv'
+	reader = data_reader(fname)
+	data_bbox = reader.get_bboxed_img()
+	data_mask = reader.get_masked_img()
+	print(data_bbox[0])
+	for i in range(5):
+		img_bbox = data_bbox[i][0]
+		img_mask = data_mask[i][0]
+		breed_bbox_id = data_bbox[i][1]
+		breed_mask_id = data_mask[i][1]
+		print("breed_bbox_id: \tbreed_mask_id: ", breed_bbox_id, breed_mask_id)
+		cv2.imshow('frame1', img_bbox)
+		cv2.imshow('frame2', img_mask)
+		cv2.waitKey(0)
+
+	cv2.destroyAllWindows()
+
+
+#testing_reader2()
 
 
