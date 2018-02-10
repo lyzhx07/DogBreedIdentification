@@ -1,9 +1,9 @@
-def crop(r, image):
+def crop(r):
 	'''
 	- crop the image based on box
 	- only show the colour if the mask value is 1
 	- pad pixel with mask value 0 with black colour [0, 0, 0]
-	- input: detection results of an image and the image
+	- input: detection results of an image
 		in demo.ipynb:
 		results = model.detect([image], verbose=1)
 		r = results[0]
@@ -27,7 +27,7 @@ def crop(r, image):
 	for i in range(num):
 		if class_ids[i] == id:  
 			break
-		if i == num-1:
+		else if i == num-1: 
 			return None	# no dog detected from the image, return None
 	
 	# Box
@@ -45,9 +45,7 @@ def crop(r, image):
 	            cp[r][c]=[0,0,0] 	# set unwanted pixels to be black in colour
 
 	detected = cp[y1:y2, x1:x2]		# crop the image according to the box
-#	cv2.imshow('image', detected)
-#	cv2.waitKey(0)
-#	cv2.destroyAllWindows()
-#	cv2.waitKey(1)
-#	print("done")
+	#viewer = ImageViewer(detected)
+	#viewer.show()
+	skimage.io.imsave('./cropped_img/1.png', detected)
 	return detected
